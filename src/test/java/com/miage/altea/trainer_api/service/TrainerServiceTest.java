@@ -15,9 +15,7 @@ public class TrainerServiceTest {
     void getAllTrainers_shouldCallTheRepository() {
         var trainerRepo = mock(TrainerRepository.class);
         var trainerService = new TrainerService(trainerRepo);
-
         trainerService.getAllTrainers();
-
         verify(trainerRepo).findAll();
     }
 
@@ -25,9 +23,7 @@ public class TrainerServiceTest {
     void getTrainer_shouldCallTheRepository() {
         var trainerRepo = mock(TrainerRepository.class);
         var trainerService = new TrainerService(trainerRepo);
-
         trainerService.getTrainer("Ash");
-
         verify(trainerRepo).findById("Ash");
     }
 
@@ -35,10 +31,8 @@ public class TrainerServiceTest {
     void createTrainer_shouldCallTheRepository() {
         var trainerRepo = mock(TrainerRepository.class);
         var trainerService = new TrainerService(trainerRepo);
-
         var ash = new Trainer();
         trainerService.createTrainer(ash);
-
         verify(trainerRepo).save(ash);
     }
 

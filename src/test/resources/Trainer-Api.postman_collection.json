@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "0b3edc01-4980-431b-ac3b-c3c7d946e8b2",
+		"name": "Trainer-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all trainers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/trainers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"trainers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get only one trainer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/trainers/Ash",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"trainers",
+						"Ash"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create trainer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Thomas\",\n\t\"team\": [\n\t\t{\n\t\t\t\"pokemonTypeId\": 128,\n\t\t\t\"level\": 60\n\t\t},\n\t\t{\n\t\t\t\"pokemonTypeId\": 148,\n\t\t\t\"level\": 50\n\t\t},\n\t\t{\n\t\t\t\"pokemonTypeId\": 147,\n\t\t\t\"level\": 42\n\t\t},\n\t\t{\n\t\t\t\"pokemonTypeId\": 140,\n\t\t\t\"level\": 40\n\t\t},\n\t\t{\n\t\t\t\"pokemonTypeId\": 128,\n\t\t\t\"level\": 55\n\t\t}\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/trainers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"trainers",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

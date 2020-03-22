@@ -34,6 +34,8 @@ public class TrainerService implements TrainerServiceI {
     public Trainer updateTrainer(String name, Trainer trainer) {
         Trainer realTrainer = this.getTrainer(name);
         realTrainer.setTeam(trainer.getTeam());
+        realTrainer.setPassword(trainer.getPassword());
+        realTrainer.setName(trainer.getName());
         return this.trainerRepository.save(realTrainer);
     }
 

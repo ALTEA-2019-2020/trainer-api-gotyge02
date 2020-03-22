@@ -20,11 +20,13 @@ public class TrainerApi {
             var ash = new Trainer("Ash");
             var pikachu = new Pokemon(25, 18);
             ash.setTeam(List.of(pikachu));
+            ash.setPassword("Toto");
 
             var misty = new Trainer("Misty");
             var staryu = new Pokemon(120, 18);
             var starmie = new Pokemon(121, 21);
             misty.setTeam(List.of(staryu, starmie));
+            misty.setPassword("Titi");
 
             // save a couple of trainers
             repository.save(ash);
